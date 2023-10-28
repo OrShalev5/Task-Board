@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Task Board</title>
+    <script src="../JavaScript/notes.js"></script>
+    <link rel="stylesheet" href="../CSS/notes.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <header>
+      <!-- Page title -->
+      <h1>My Task Board</h1>
+
+      <!-- Form for adding new tasks -->
+      <form id="newTaskForm">
+        <div id="newTaskInputs">
+          <!-- Input field for entering a task -->
+          <label>Task:</label><br>
+          <input id="newTaskInput" class="formInput" placeholder="Task"><br>
+
+          <!-- Input fields for specifying the due date and time -->
+          <label>Due: </label><br>
+          <input type="date" id="newDateInput" class="formInput">
+          <input type="time" id="newTimeInput" class="formInput">
+        </div>
+        <br>
+        
+        <!-- Buttons for adding a task and clearing the form -->
+        <button class="button" type="button" id="newTaskSubmit" onclick="addTask()">Add task</button>
+        <button class="button" type="button" id="clearForm" onclick="clearTaskForm()">Clear fields</button>
+      </form>
+    </header>
+
+    <main>
+      <!-- Container for displaying task submissions -->
+      <container class="taskSubmissions">
+      
+        <h1>Task Board</h1>
+
+        <!-- Container for displaying task cards -->
+        <div id="noteCards">
+        </div>
+      </container>
+    </main>
+  </body>
+</html>
